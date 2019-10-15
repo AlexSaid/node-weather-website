@@ -11,7 +11,8 @@ const forecast = function(latitude, longitude, callback){
      callback("Unable to connect to location try change search", undefined);
     }
     else{
-     callback(undefined, body.daily.data[0].summary + " its currently " + body.currently.temperature + " degree thers a  " + body.currently.precipProbability + "% chance of rain");
+   
+     callback(undefined, body.daily.data[0].summary + " its currently " + body.currently.temperature + " degree out, the high today is "+ body.daily.data[0].temperatureHigh + " with a low of " + body.daily.data[0].temperatureLow + ". thers  a  " + body.currently.precipProbability + "% chance of rain");
     }
 })
 }
